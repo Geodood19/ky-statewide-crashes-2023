@@ -62,6 +62,26 @@
         </div>
     </div>
 
+    <!-- Modal for County Selection -->
+    <div id="county-modal" style="display: none;">
+        <div class="container">
+            <span> &times; </span>
+            <div class="title">Please Select a County</div>
+            <select id="county-select">
+                <option value="">Select a county</option>
+                <!-- Options will be populated here -->
+            </select>
+            <div class="button-container">
+                <button id="load-button">Load Data</button> <!-- Load Data button -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Reset button -->
+    <div id="reset-button-container"> <!-- Separate div for the reset button -->
+        <button id="reset-button">Reset Map</button> <!-- Reset button -->
+    </div>
+
     <!-- MapLibre library  -->
     <script src="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.js"></script>
     <link href="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
@@ -69,11 +89,13 @@
     <!-- Add D3 JS Library -->
     <script src="https://d3js.org/d3.v7.js"></script>
 
-    <!-- use maplibre js app -->
-    <script src="js/app.js"></script>
+    <!-- use js app -->
+    <!-- <script src="js/app.js"></script> -->
+    <!-- use js app -->
+    <script src="js/app copy.js"></script>
 
-    <!-- Simple Statistics -->
-    <script src="https://unpkg.com/simple-statistics@7.8.3/dist/simple-statistics.min.js"></script>
+    <!-- turf.js -->
+    <script src="https://unpkg.com/@turf/turf/turf.min.js"></script>
 </body>
 
 </html>
