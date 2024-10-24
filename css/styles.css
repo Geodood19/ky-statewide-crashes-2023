@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: whitesmoke;
+  font-family: "Libre Franklin", sans-serif;
+  color: #0d0000;
+  font-size: 100%;
+}
+
+h1 {
+  position: absolute;
+  z-index: 650;
+  top: 10px;
+  left: 15px;
+  padding: 8px 15px;
+  margin: 0;
+  color: whitesmoke;
+  font-size: 1.5em;
+  background: rgba(25, 25, 25, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.32);
+}
+
+#map {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+h2 {
+  position: absolute;
+  z-index: 650;
+  top: 10px;
+  left: 15px;
+  padding: 8px 15px;
+  margin: 0;
+  color: whitesmoke;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background: rgba(25, 25, 25, 0.8);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h2:hover {
+  background: rgb(100, 100, 100);
+}
+
+h2:active {
+  background: #0063e4;
+}
+
+#modal {
+  display: none;
+  position: absolute;
+  z-index: 2000;
+  padding: 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: whitesmoke;
+  font-size: 1.5em;
+}
+
+#modal .container {
+  width: 500px;
+  margin: 10px auto;
+  padding: 5px 20px;
+  position: relative;
+  background: rgba(25, 25, 25, 0.8);
+  border-radius: 5px;
+  border: #0d0000 1px solid;
+}
+
+#modal a:link,
+#modal a:visited {
+  color: #0063e4;
+}
+
+#modal a:hover {
+  color: #e4af00;
+}
+
+#modal div {
+  margin: 20px auto;
+}
+
+#modal h1 {
+  display: none;
+}
+
+#modal p {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin: 5px 0;
+}
+
+#modal .footer {
+  font-size: 1rem;
+  color: rgb(201, 201, 201);
+  text-align: center;
+}
+
+#modal span {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  cursor: pointer;
+}
+
+#legend {
+  font-family: "Libre Franklin", sans-serif;
+  position: absolute;
+  z-index: 650;
+  bottom: 50px;
+  right: 10px;
+  padding: 6px 8px;
+  font-size: 1em;
+  background: rgba(25, 25, 25, 0.8);
+  color: whitesmoke;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.32);
+  border-radius: 5px;
+  /* width: 160px; */
+}
+
+.legend-boxes {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border: 1px solid #000;
+}
+
+.legend h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1em;
+  color: whitesmoke;
+  margin: 0;
+}
+
+.legend h3 span {
+  font-size: 1.3em;
+  margin: 0 20px 0 0;
+}
+
+.legend ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 12px 4px 0;
+}
+
+.legend li {
+  list-style-type: none;
+  height: 22px;
+}
+
+.legend span {
+  width: 30px;
+  height: 20px;
+  float: left;
+  margin-right: 10px;
+}
+
+.legend .bar {
+    display: inline-block;
+    height: 12 px;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+     rgba(33,102,172,0) 0%,
+     rgba(103,169,207,0.75) 30%, 
+     rgba(209,229,240,0.9) 50%,
+     rgb(253,219,199) 75%, 
+     rgb(239,138,98) 90%,
+     rgb(178,24,43) 100%
+     );
+  }
+
+/* Small devices (portrait phones, 576px and below) */
+@media (max-width: 576px) and (orientation: portrait) {
+  h1 {
+    display: none;
+  }
+
+  #modal .container {
+    width: 90%;
+  }
+
+  #modal h1 {
+    display: block;
+    position: relative;
+    margin: 20px auto;
+    padding: 0;
+    font-size: 1.6rem;
+    top: unset;
+    left: unset;
+  }
+}
+
+#slider-controls {
+  font-family: "Libre Franklin", sans-serif;
+  position: absolute;
+  font-size: 0.9rem;
+  z-index: 650;
+  bottom: 10px;
+  left: 15px;
+  width: 217px;
+  padding: 8px 25px 8px 15px;
+  background: rgba(25, 25, 25, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.32);
+  border-radius: 5px;
+  color: whitesmoke;
+}
+
+#slider-controls .min {
+  float: left;
+}
+
+#slider-controls .max {
+  float: right;
+  margin-right: -15px;
+}
+
+.time-slider {
+  width: 100%;
+}
+
+label {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#info {
+  position: absolute;
+  z-index: 1000;
+  padding: 5px;
+  display: none;
+  background: rgba(25, 25, 25, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.32);
+  /* width: 260px; */
+  /* position: absolute; */
+}
+
+h3 {
+  position: absolute;
+  z-index: 650;
+  bottom: 85px;
+  left: 15px;
+  padding: 8px 15px;
+  margin: 0;
+  color: whitesmoke;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background: rgba(25, 25, 25, 0.8);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h3:hover {
+  background: rgb(100, 100, 100);
+}
+
+h3:active {
+  background: #0063e4;
+}
+
+#stats {
+  font-family: "Libre Franklin", sans-serif;
+  display: none;
+  position: absolute;
+  z-index: 650;
+  bottom: 135px;
+  left: 15px;
+  padding: 8px 15px;
+  font-size: 1em;
+  background: rgba(25, 25, 25, 0.8);
+  color: whitesmoke;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.32);
+  border-radius: 5px;
+  cursor: pointer;
+  /* overflow: scroll; */
+}
+
+#stats .container {
+  font-family: "Libre Franklin", sans-serif;
+  color: whitesmoke;
+  width: 500px;
+  height: auto;
+  margin: 10px auto;
+  padding: 5px 20px;
+  position: relative;
+  /* background: rgba(25, 25, 25, 0.8); 
+  border-radius: 5px;
+  border: #0d0000 1px solid;*/
+  
+}
+
+#bar-chart {
+  /* font-family: "Libre Franklin", sans-serif; */
+  width: 100%;
+  height: 400px;
+  margin: 10px auto;
+  /* background: rgba(169, 169, 169, 0.8); */
+}
